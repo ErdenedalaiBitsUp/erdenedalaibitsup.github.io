@@ -1,6 +1,11 @@
 <html>
 
 <head>
+    <style>
+        body {
+            background-image: url('back.png');
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -8,7 +13,7 @@
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             console.log(urlParams.get('c'));
-            document.getElementById("text").innerHTML = document.getElementById("text").innerHTML + " " + urlParams.get('c');
+            document.getElementById("text").innerHTML = urlParams.get('c');
         });
 
         $(window).on("load", function () {
@@ -16,12 +21,12 @@
         });
     </script>
 
-
     </script>
 </head>
 
 <body>
-    <h1 id="text"> Test QR</h1>
+    <h1 style="text-align: center;margin-top: 25%;"> Test QR</h1>
+    <h1 id="text" style="text-align: center;"> </h1>
 </body>
 
 
